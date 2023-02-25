@@ -12,4 +12,8 @@
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/epilog_after.php"); ?>
 
 //И помните! Лучше всего еще и в заголовках пометить в каком формате страница возвращает данные.
-//Например так: header('Content-Type:application/json;charset=utf-8');
+//Например так: 
+
+header('Content-Type: text/html; charset=utf-8');
+// или так
+header('Content-Type:application/json;charset=utf-8');
