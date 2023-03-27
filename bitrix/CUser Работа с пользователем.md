@@ -36,14 +36,20 @@ else
 ****************************************** 
 
 ## Множественное поле
-global $USER_FIELD_MANAGER;
-$UF_FILIAL_IDs = [];
-$arFields_filial = $USER_FIELD_MANAGER->GetUserFields("USER");
-$obEnum = new CUserFieldEnum;
-$rsEnum = $obEnum->GetList(array(), array("USER_FIELD_ID" => $arFields_filial["UF_FILIAL"]["ID"]));
-while ($arEnum = $rsEnum->GetNext()) {
-$UF_FILIAL_IDs[] = $arEnum["ID"];
-}
-$arFields["UF_FILIAL"] = $UF_FILIAL_IDs;
+global $USER_FIELD_MANAGER;  
+$UF_FILIAL_IDs = [];  
+$arFields_filial = $USER_FIELD_MANAGER->GetUserFields("USER");  
+$obEnum = new CUserFieldEnum;  
+$rsEnum = $obEnum->GetList(array(), array("USER_FIELD_ID" => $arFields_filial["UF_FILIAL"]["ID"]));  
+while ($arEnum = $rsEnum->GetNext()) {  
+    $UF_FILIAL_IDs[] = $arEnum["ID"];  
+}  
+$arFields["UF_FILIAL"] = $UF_FILIAL_IDs;  
 
-****************************************** 
+******************************************  
+
+## Обновление одного поля
+
+$user = new CUser;  
+$user->Update($USER->getId(), ["UF_BIK" => ""]);  
+******************************************  
