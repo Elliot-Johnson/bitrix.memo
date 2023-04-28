@@ -53,3 +53,11 @@ $arFields["UF_FILIAL"] = $UF_FILIAL_IDs;
 $user = new CUser;  
 $user->Update($USER->getId(), ["UF_BIK" => ""]);  
 ******************************************  
+
+## Получение всех полей текущего юзера
+$arUser = CUser::GetByID($GLOBALS["USER"]->GetId())->GetNext();  
+var_dump_pre($arUser);  
+или одного  
+var_dump_pre($arUser["UF_FILIAL"]);  
+
+
