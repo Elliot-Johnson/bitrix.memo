@@ -44,7 +44,19 @@ $rsEnum = $obEnum->GetList(array(), array("USER_FIELD_ID" => $arFields_filial["U
 while ($arEnum = $rsEnum->GetNext()) {  
     $UF_FILIAL_IDs[] = $arEnum["ID"];  
 }  
-$arFields["UF_FILIAL"] = $UF_FILIAL_IDs;  
+$arFields["UF_FILIAL"] = $UF_FILIAL_IDs; 
+
+
+## Еще вариант  
+$rsEnum = CUserFieldEnum::GetList(
+                                [],
+                                [
+                                    "ID" => $user['UF_CURRENT_FILIAL'],
+                                    "USER_FIELD_ID" => 45
+                                ]
+                            );
+if ($ar_res = $rsEnum->Fetch()) {
+}  
 
 ******************************************  
 
