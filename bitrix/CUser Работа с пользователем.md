@@ -28,35 +28,35 @@ $arFields = array(
                     "UF_INN" => $this->counteragent_fields["INN"],  
                 );  
 
-$ID = $user->Add($arFields);  
-if (intval($ID) > 0)  
-    return true;  
+$ID = $user->Add($arFields);    
+if (intval($ID) > 0)    
+    return true;   
 else  
-    echo $user->LAST_ERROR;  
+    echo $user->LAST_ERROR;   
 ****************************************** 
 
 ## Множественное поле
-global $USER_FIELD_MANAGER;  
-$UF_FILIAL_IDs = [];  
-$arFields_filial = $USER_FIELD_MANAGER->GetUserFields("USER");  
-$obEnum = new CUserFieldEnum;  
-$rsEnum = $obEnum->GetList(array(), array("USER_FIELD_ID" => $arFields_filial["UF_FILIAL"]["ID"]));  
-while ($arEnum = $rsEnum->GetNext()) {  
-    $UF_FILIAL_IDs[] = $arEnum["ID"];  
+global $USER_FIELD_MANAGER;   
+$UF_FILIAL_IDs = [];   
+$arFields_filial = $USER_FIELD_MANAGER->GetUserFields("USER");   
+$obEnum = new CUserFieldEnum;   
+$rsEnum = $obEnum->GetList(array(), array("USER_FIELD_ID" => $arFields_filial["UF_FILIAL"]["ID"]));   
+while ($arEnum = $rsEnum->GetNext()) {   
+    $UF_FILIAL_IDs[] = $arEnum["ID"];   
 }  
-$arFields["UF_FILIAL"] = $UF_FILIAL_IDs; 
+$arFields["UF_FILIAL"] = $UF_FILIAL_IDs;  
 
 
 ## Еще вариант  
-$rsEnum = CUserFieldEnum::GetList(
-                                [],
-                                [
-                                    "ID" => $user['UF_CURRENT_FILIAL'],
-                                    "USER_FIELD_ID" => 45
-                                ]
-                            );
-if ($ar_res = $rsEnum->Fetch()) {
-}  
+$rsEnum = CUserFieldEnum::GetList(  
+                                [],  
+                                [  
+                                    "ID" => $user['UF_CURRENT_FILIAL'],  
+                                    "USER_FIELD_ID" => 45  
+                                ]  
+                            );  
+if ($ar_res = $rsEnum->Fetch()) {  
+}    
 
 ******************************************  
 
