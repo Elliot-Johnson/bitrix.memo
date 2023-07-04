@@ -72,4 +72,11 @@ var_dump_pre($arUser);
 или одного  
 var_dump_pre($arUser["UF_FILIAL"]);  
 
+## Узнать состоит ли юзер в группе №9.
+global $USER;  
+if (in_array(9, CUser::GetUserGroup($USER->GetID()))) {           
+  
+}  
+
+
 
