@@ -1,3 +1,4 @@
+# Ресайз картинок
 ##Image Resize
 
 $file = CFile::ResizeImageGet($uInfo['PERSONAL_PHOTO'], array('width'=>150, 'height'=>150), BX_RESIZE_IMAGE_PROPORTIONAL, true);               
