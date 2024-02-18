@@ -1,4 +1,5 @@
-/// Получить ID инфоблока по коду
+# Получить ID инфоблока по коду
+```
 // Определение ID инфоблока по коду counting_of_banners_showing_and_clicks
 $IBLOCK_ID = 0;
 if (CModule::IncludeModule('iblock')) {
@@ -6,3 +7,4 @@ if (CModule::IncludeModule('iblock')) {
     while ($arrIBlock = $res->Fetch()) $IBLOCK_ID = intval($arrIBlock['ID']);
 }
 //
+```
