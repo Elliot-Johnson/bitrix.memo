@@ -1,0 +1,39 @@
+.favorite_info_panel{
+    display: none;
+}
+.favorite_info_panel.active{
+    display: block;
+}
+.favorite_info_panel__link{
+    color: #000000;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 50px;
+}
+.favorite_info_panel__icon
+{
+    flex: 0 0 24px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: center/90% no-repeat url("/include/catalog/favorite/favorite.svg");
+    margin-right: 2px;
+}
+.favorite_info_panel.active .favorite_info_panel__icon
+{
+    background-image: url("/include/catalog/favorite/favorite_active.svg");
+}
+.favorite_info_panel__counter{
+    flex: 0 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    color: #ffffff;
+    background: #bf1e2e;
+    border-radius: 30px;
+}
