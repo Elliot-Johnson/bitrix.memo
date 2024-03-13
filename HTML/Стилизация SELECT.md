@@ -1,6 +1,6 @@
 # Стилизация SELECT
 
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![alt ](https://github.com/Elliot-Johnson/bitrix.memo/blob/main/HTML/select.PNG?raw=true)
 
 ```
 <select class="select-css" name="city" id="city">
