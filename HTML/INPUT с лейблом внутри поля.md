@@ -1,4 +1,4 @@
-# Красивые инпуты со с лейблом внутри поля
+# INPUT с лейблом внутри поля
 ```
 <div class="input_container">
   <input id="ind_name" type="text" autocomplete="off" class="input" name="name" placeholder="">
